@@ -41,4 +41,17 @@ class User extends Authenticatable
   protected $casts = [
     'email_verified_at' => 'datetime',
   ];
+
+  /**
+   * Get the spaces for the organization.
+   */
+  public function organizations()
+  {
+    return $this->hasManyThrough(Organization::class, Membership::class);
+  }
+
+  public function rights()
+  {
+    return $this->hasManyThrough(Right::class, OrganizationRight::class);
+  }
 }
