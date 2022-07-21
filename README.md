@@ -1,3 +1,5 @@
 # Space CMS
 
-## Client
+## Installation
+### Locally
+Run `./vendor/bin/sail up` to run with docker.
