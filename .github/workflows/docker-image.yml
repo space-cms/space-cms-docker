@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker compose build
+      run: docker build ./docker/8.1 --file ./docker/8.1/Dockerfile --tag my-image-name:$(date +%s)
