@@ -1,14 +1,14 @@
 import { createTheme } from '@mui/material/styles'
-import { red } from '@mui/material/colors'
+import { blue, red } from '@mui/material/colors'
 
-// Create a theme instance.
 const theme = createTheme({
+	typography: { fontFamily: 'Cousine' },
 	palette: {
 		primary: {
-			main: '#556cd6'
+			main: blue[400]
 		},
 		secondary: {
-			main: '#19857b'
+			main: blue[900]
 		},
 		error: {
 			main: red.A400

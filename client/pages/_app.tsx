@@ -6,6 +6,9 @@ import { CacheProvider, EmotionCache } from '@emotion/react'
 import createEmotionCache from '../utils/createEmotionCache'
 import theme from '../styles/theme'
 
+import '@fontsource/cousine'
+import UniverseProvider from '../contexts/UniverseContext'
+
 interface MyAppProps extends AppProps {
 	emotionCache?: EmotionCache
 }
@@ -21,7 +24,9 @@ const MyApp = (props: MyAppProps) => {
 			</Head>
 			<ThemeProvider theme={theme}>
 				<CssBaseline />
-				<Component {...pageProps} />
+				<UniverseProvider>
+					<Component {...pageProps} />
+				</UniverseProvider>
 			</ThemeProvider>
 		</CacheProvider>
 	)
